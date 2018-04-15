@@ -1,0 +1,70 @@
+<html ng-app = "code-foo">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js"></script>
+    <script src="ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src = "functions.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css"/>
+    <link rel = "stylesheet" href = "styles.css"></link>
+  </head>
+  <body ng-controller = "CodeFooController as contentControl">
+    <div class = "container">
+      <uib-tabset class = "pageContainer" align = "center" type = "pill">
+        <uib-tab heading = "VIDEOS" classes = "tabBorder leftTab">
+          <div class = "row contentContainer" ng-repeat = "article in contentControl.videoContent track by $index">
+            <div class = "col-sm-6 col-md-6 col-lg-6">
+              <picture class = "thumbnail" >
+                <source srcset = "{{article.thumbnails[0].url}}" media = "(max-width: 466px)">
+                <source srcset = "{{article.thumbnails[1].url}}" media = "(max-width: 626px)">
+                <source srcset = "{{article.thumbnails[2].url}}" media = "(min-width: 626px)">
+                <img src = "{{article.thumbnails[2].url}}">
+              </picture>
+            </div>
+            <div class = "col-sm-6 col-md-6 col-lg-6">
+              <div class = "row">
+                <span class = "comments">Comments: {{contentControl.videoCommentCounts[$index].count}}</span>
+              </div>
+              <div class = "row">
+                <span class = "articleLead"><b>{{article.metadata.title}}</b></span>
+              </div>
+              <div class = "row">
+                <div align = "left" class = "col-sm-12 col-md-12 col-lg-12">
+                  <button class = "btn" ng-click = "contentControl.previewCollapsed = !contentControl.previewCollapsed">Preview</button>
+                  <div class = " preview horizontal-collapse" uib-collapse = "false" horizontal>
+                    <div class = "well well-md">{{article.metadata.description}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </uib-tab>
+        <uib-tab heading = "ARTICLES" classes = "tabBorder rightTab">
+          <div class = "row contentContainer" ng-repeat = "article in contentControl.articleContent track by $index">
+            <div class = "col-sm-6 col-md-6 col-lg-6">
+              <picture class = "thumbnail" >
+                <source srcset = "{{article.thumbnails[0].url}}" media = "(max-width: 466px)">
+                <source srcset = "{{article.thumbnails[1].url}}" media = "(max-width: 626px)">
+                <source srcset = "{{article.thumbnails[2].url}}" media = "(min-width: 626px)">
+                <img src = "{{article.thumbnails[2].url}}" class = "thumbnail">
+              </picture>
+            </div>
+            <div class = "col-sm-6 col-md-6 col-lg-6">
+              <div class = "row">
+                <span class = "comments">Comments: {{contentControl.articleCommentCounts[$index].count}}</span>
+              </div>
+              <div class = "row">
+                <span class = "articleLead"><b>{{article.metadata.title}}</b></span>
+              </div>
+            </div>
+          </div>
+        </uib-tab>
+      </uib-tabset>
+      <div class = "row">
+        <div align = "center" class = "col-sm-12 col-md-12 col-lg-12">
+          <button type = "button" class = "btn btn-lg btn-block loadButton">LOAD MORE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

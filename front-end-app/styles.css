@@ -1,0 +1,105 @@
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.preview{
+  height: 100%;
+}
+.contentContainer{
+ padding: 2%;
+}
+
+.pageContainer{
+  margin-bottom: 2%;
+}
+
+.articleLead{
+  font-family: "ars-maquette-web", sans-serif;
+  color: #252627;
+  font-weight: 700;
+  text-align: left;
+  font-size: 2vw;
+}
+
+.comments{
+  font-family: "ars-maquette-web", sans-serif;
+  color: #bf1313;
+  font-weight: bold;
+}
+
+.articleLead:hover{
+  text-decoration:  underline;
+  color: #537EC9;
+}
+
+.thumbnail{
+  border-radius: 5px;
+  width: 100%;
+}
+
+.thumbnail:hover{
+  opacity: 0.5;
+}
+
+.videoButton{
+
+}
+
+.loadButton{
+  font-family: "ars-maquette-web", sans-serif;
+  font-weight: bold;
+  background-color: #bf1313;
+  border-color: #bf1313;
+  border-radius: 15px;
+  color: white;
+  padding: 1.5%;
+  width: 90%;
+}
+
+.loadButton:hover{
+  text-decoration: underline;
+}
+
+.tabBorder{
+  border: solid #bf1313;
+  border-width: 5px;
+}
+
+.nav{
+  justify-content: center;
+}
+
+.uib-tab{
+  width: 45%;
+  padding: 0%;
+  font-family: "ars-maquette-web", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.uib-tab:hover{
+  text-decoration: underline;
+}
+
+.uib-tab a{
+  color: #bf1313;
+}
+
+.uib-tab.active{
+  background-color: #bf1313;
+}
+
+.uib-tab.active a{
+  color: white;
+}
+
+.leftTab{
+  border-radius: 22px 0px 0px 22px;
+}
+
+.rightTab{
+  border-radius: 0px 22px 22px 0px;
+}
