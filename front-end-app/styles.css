@@ -3,9 +3,6 @@ img{
   height: auto;
 }
 
-.preview{
-  height: 100%;
-}
 .contentContainer{
  padding: 2%;
 }
@@ -26,6 +23,7 @@ img{
   font-family: "ars-maquette-web", sans-serif;
   color: #bf1313;
   font-weight: bold;
+  font-size: 1.5vw;
 }
 
 .articleLead:hover{
@@ -40,10 +38,6 @@ img{
 
 .thumbnail:hover{
   opacity: 0.5;
-}
-
-.videoButton{
-
 }
 
 .loadButton{
