@@ -20,7 +20,7 @@ function initializeDoc(){
   //
   // Form used to generate a table of size n
   //
-  echo "<form><b>Grid Size: </b>" . "<input value = '4' type = 'number' name = 'size'><input type = 'submit'></form>";
+  echo "<form onsubmit = 'startCrossing()'><b>Grid Size: </b>" . "<input type = 'number' name = 'size'><input type = 'submit'></form>";
 }
 
 function startCrossing(){
@@ -32,10 +32,11 @@ function startCrossing(){
   //
   //Generate grid and display on DOM
   //
-  if($_GET["size"] != 4){
-    $gridSize = 4;
-  }else{
+  if($_GET["size"] > 1){
     $gridSize = $_GET["size"];
+  }else{
+    echo "Please enter a size greater than 1";
+    return;
   }
   $myGrid = new Grid($gridSize);
   $myGrid->displayTable();
