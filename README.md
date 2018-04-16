@@ -46,4 +46,4 @@ To view the webpage, ensure that you are connected to the internet and click on 
 
 ### Conclusion
 
-Thank you for taking the time to look through my application! If you have any questions, please feel free to reach out to me at bsauvage14@gmail.com. Thank you for your consideration!
+Thank you for taking the time to look through my application! I originally heard about Code Foo from postings on the IGN website. I've seen it posted annually for a few years now, so I thought I'd give it a shot! If you have any questions, please feel free to reach out to me at bsauvage14@gmail.com. Thank you for your consideration!
